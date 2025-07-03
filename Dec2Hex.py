@@ -1,5 +1,6 @@
 import sys
- def decimal_to_hex(decimal_value):
+
+def decimal_to_hex(decimal_value):
     hex_chars = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F']
     hexadecimal = ""
     num = decimal_value
@@ -18,7 +19,7 @@ if __name__ == "__main__":
     # Check if an argument is provided
     if len(sys.argv) < 2:
         print("Error: No input argument provided. Please provide a decimal integer.")
-        sys.exit(1)  # Exit with error status
+        sys.exit(1)
 
     # Try to convert the input to integer and handle non-integer inputs
     try:
@@ -29,4 +30,4 @@ if __name__ == "__main__":
         decimal_to_hex(decimal_value)
     except ValueError:
         print("Error: Invalid input. Please provide a valid integer.")
-        sys.exit
+        sys.exit(1)
